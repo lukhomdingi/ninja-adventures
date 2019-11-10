@@ -1,0 +1,15 @@
+.container {
+    margin-top: 60px;
+}
+.btn {
+    width: 100% !important;
+    margin-bottom: 8px;
+}
+
+button {
+    outline: 0 !important;
+}
+canvas {
+    margin: auto;
+    display: flex;
+}
