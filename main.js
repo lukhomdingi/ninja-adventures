@@ -1,18 +1,12 @@
-// Constant values
-const SPEED = 100;
 
-// Get canvas
-const canvas = document.getElementById('ninja-canvas');
+// Action controller
+const actionController = new ActionController();
 
-// Instantiate display object
-const display = new Display(canvas);
+// Display Controller
+const displayController = new DisplayController();
 
-// Instantiate game object
-const game = new Game(display);
+// Game object
+const game = new GameController();
+game.start();
 
-// Timer
-const timer = setInterval(() => {
-    game.update();
-}, SPEED);
-
-const changeActionTo = (action) => game.updateAction(action);
+const changeActionTo = (action) => actionController.update(action);
