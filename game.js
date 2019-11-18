@@ -17,9 +17,9 @@ class GameController {
         const fpsInterval = 1000 / FPS;
         if (elapsed > fpsInterval) {
             this.update();
+            this.lastRender = timestamp - (elapsed % fpsInterval);
         }
 
-        this.lastRender = timestamp - (elapsed % fpsInterval);
         window.requestAnimationFrame(this.loop);
     }
     
