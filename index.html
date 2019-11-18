@@ -15,28 +15,52 @@
 
     <!-- Scripts -->
     <script src="action-controller.js"></script>
+    <script src="input-controller.js"></script>
     <script src="player.js"></script>
     <script src="display.js"></script>
     <script src="game.js"></script>
 </head>
 <body>
     <div class="container-fluid">
+        <br>
         <div class="row">
-            <button class="btn btn-default" type="button" onclick="changeActionTo('idle')">Idle</button>
+            <div class="col-md-12">
+                    <label>Attack:</label> &nbsp;
+                    <button class="btn btn-default" type="button">Space</button>&nbsp;&nbsp;
+                    
+                    <label>Climb:</label> &nbsp;
+                    <button class="btn btn-default" type="button">C</button>&nbsp;&nbsp;
 
-            <button class="btn btn-warning" type="button" onclick="changeActionTo('attack')">Attack</button>
-            <button class="btn btn-primary" type="button" onclick="changeActionTo('climb')">Climb</button>
-            <button class="btn btn-danger" type="button" onclick="changeActionTo('dead')">Dead</button>
-            <button class="btn btn-primary" type="button" onclick="changeActionTo('glide')">Glide</button>
-            <button class="btn btn-primary" type="button" onclick="changeActionTo('jump')">Jump</button>
-            <button class="btn btn-warning" type="button" onclick="changeActionTo('jump attack')">Jump Attack</button>
-            <button class="btn btn-warning" type="button" onclick="changeActionTo('jump throw')">Jump Throw</button>
-            <button class="btn btn-primary" type="button" onclick="changeActionTo('run')">Run</button>
-            <button class="btn btn-primary" type="button" onclick="changeActionTo('slide')">Slide</button>
-            <button class="btn btn-warning" type="button" onclick="changeActionTo('throw')">Throw</button>
+                    <label>Glide:</label> &nbsp;
+                    <button class="btn btn-default" type="button">G</button>&nbsp;&nbsp;
+
+                    <label>Jump:</label> &nbsp;
+                    <button class="btn btn-default" type="button">W</button> &nbsp;&nbsp;
+
+                    <!-- <label>Jump Attack:</label> &nbsp; -->
+                    <!-- <button class="btn btn-default" type="button">W + Space</button> &nbsp;&nbsp; -->
+
+                    <!-- <label>Jump Throw:</label> &nbsp; -->
+                    <!-- <button class="btn btn-default" type="button">W + K</button> &nbsp;&nbsp; -->
+                    
+                    <!-- <label>Run Left:</label> &nbsp; -->
+                    <!-- <button class="btn btn-default" type="button">A</button> &nbsp;&nbsp; -->
+
+                    <label>Run Right:</label> &nbsp;
+                    <button class="btn btn-default" type="button">D</button> &nbsp;&nbsp;
+
+                    <label>Slide:</label> &nbsp;
+                    <button class="btn btn-default" type="button">L</button>&nbsp;&nbsp;
+
+                    <label>Throw:</label> &nbsp;
+                    <button class="btn btn-default" type="button">K</button>
+            </div>
+            
         </div>
         <div class="row">
-            <canvas id="main-canvas"></canvas>
+            <div class="col-md-12">
+                <canvas id="main-canvas"></canvas>
+            </div>
         </div>
     </div>
     

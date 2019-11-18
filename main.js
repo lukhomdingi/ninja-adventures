@@ -2,6 +2,8 @@
 // Action controller
 const actionController = new ActionController();
 
+const inputController = new InputController();
+
 // Display Controller
 const displayController = new DisplayController();
 

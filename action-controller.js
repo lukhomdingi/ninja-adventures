@@ -62,21 +62,15 @@ class ActionController {
         return this.currentAction.getFrame(frame);
     }
 
-    update(value) {
-        let action = null;
-        switch (value.toLowerCase()) {
-            case 'attack': action = ACTION.ATTACK; break;
-            case 'climb': action = ACTION.CLIMB; break;
-            case 'dead': action = ACTION.DEAD; break;
-            case 'glide': action = ACTION.GLIDE; break;
-            case 'jump': action = ACTION.JUMP; break;
-            case 'jump attack': action = ACTION.JUMP_ATTACK; break;
-            case 'jump throw': action = ACTION.JUMP_THROW; break;
-            case 'run': action = ACTION.RUN; break;
-            case 'slide': action = ACTION.SLIDE; break;
-            case 'throw': action = ACTION.THROW; break;
-            default: action = ACTION.IDLE;
-        }
-        this.currentAction = this.actions.find((a) => a.name == action);
-    }
+    attack = () => this.currentAction = this.actions.find((a) => a.name == ACTION.ATTACK);
+    climb = () => this.currentAction = this.actions.find((a) => a.name == ACTION.CLIMB);
+    dead = () => this.currentAction = this.actions.find((a) => a.name == ACTION.DEAD);
+    glide = () => this.currentAction = this.actions.find((a) => a.name == ACTION.GLIDE);
+    idle = () => this.currentAction = this.actions.find((a) => a.name == ACTION.IDLE);
+    jump = () => this.currentAction = this.actions.find((a) => a.name == ACTION.JUMP);
+    jumpAttack = () => this.currentAction = this.actions.find((a) => a.name == ACTION.JUMP_ATTACK);
+    jumpThrow = () => this.currentAction = this.actions.find((a) => a.name == ACTION.JUMP_THROW);
+    run = (direction) => this.currentAction = this.actions.find((a) => a.name == ACTION.RUN);
+    slide = () => this.currentAction = this.actions.find((a) => a.name == ACTION.SLIDE);
+    throw = () => this.currentAction = this.actions.find((a) => a.name == ACTION.THROW);
 }
