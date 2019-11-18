@@ -6,7 +6,6 @@ class InputController {
 
     keydown = (event) => {
         event.preventDefault();
-        console.log('keydown', event.key);
 
         switch(event.key.toLowerCase()) {
             case ' ': actionController.attack(); break;
@@ -25,11 +24,6 @@ class InputController {
 
     keyup = (event) => {
         event.preventDefault();
-        let key = event.key.toLowerCase();
-        if (key) {
-
-        } else {
-            actionController.idle();
-        }
+        actionController.idle();
     }
 }
