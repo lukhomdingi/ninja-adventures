@@ -2,7 +2,11 @@
 // Action controller
 const actionController = new ActionController();
 
+//Input Controller
 const inputController = new InputController();
+
+// Player controller
+const playerController = new PlayerController();
 
 // Display Controller
 const displayController = new DisplayController();
