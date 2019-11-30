@@ -16,6 +16,8 @@ const DEFAULT_ACTION = ACTION.IDLE;
 const IMAGE_DIR = './assets/sprites';
 const NUMBER_OF_FRAMES = 10;
 const FILE_EXTENSION = 'png';
+const RUNNING_SPEED = 10;
+const JUMPING_LEVEL = 5;
 
 class Action {
     constructor(name, numberOfFrames) {
@@ -70,7 +72,16 @@ class ActionController {
     jump = () => this.currentAction = this.actions.find((a) => a.name == ACTION.JUMP);
     jumpAttack = () => this.currentAction = this.actions.find((a) => a.name == ACTION.JUMP_ATTACK);
     jumpThrow = () => this.currentAction = this.actions.find((a) => a.name == ACTION.JUMP_THROW);
-    run = (direction) => this.currentAction = this.actions.find((a) => a.name == ACTION.RUN);
+    run = (direction) => {
+        const {position} = playerController;
+        this.currentAction = this.actions.find((a) => a.name == ACTION.RUN);
+        if (direction == DIRECTION.LEFT) {
+            playerController.position.x -= position.x > 0 ? RUNNING_SPEED : 0;
+        }
+        else {            
+            playerController.position.x += RUNNING_SPEED;
+        }
+    }
     slide = () => this.currentAction = this.actions.find((a) => a.name == ACTION.SLIDE);
     throw = () => this.currentAction = this.actions.find((a) => a.name == ACTION.THROW);
 }
