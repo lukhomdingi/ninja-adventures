@@ -13,6 +13,22 @@ button {
     outline: 0 !important;
 }
 canvas {
-    display: flex;
-    background: #333;
+    background: transparent;
+}
+
+.animation-stack {
+    position: relative;
+}
+
+.animation-stack canvas {
+    position:absolute;
+}
+
+canvas#background-canvas {
+    margin: auto;
+    display: flex;;
+}
+
+canvas#player-canvas {
+    background: transparent;
 }
